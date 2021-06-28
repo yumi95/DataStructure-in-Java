@@ -27,13 +27,13 @@ public class Travel {
 		n1.left = n2; n1.right = n3; // n1狼 哭率 级 -> n2, n1狼 坷弗率 级 -> n3
 		n2.left = n4; n2.right = n5; // n2狼 哭率 级 -> n4, n2狼 坷弗率 级 -> n5
 		n3.left = n6; n3.right = n7; // n3狼 哭率 级 -> n6, n3狼 坷弗率 级 -> n7
-		n4.left = n8; n5.right = n9; // n4狼 哭率 级 -> n8, n5狼 坷弗率 级 -> n9
+		n4.left = n8; n5.left = n9; // n4狼 哭率 级 -> n8, n5狼 哭率 级 -> n9
 		n7.right = n10; n9.right = n11; // n7狼 坷弗率 级 -> n10, n9狼 坷弗率 级 -> n11
 		return n1; // 矫累 级 府畔
 	}
 	public void A_Course(Node n) { // A内胶
 		if (n != null) {
-			System.out.print(n.name + "-> "); // 级 n 规巩
+			System.out.print(n.name + " "); // 级 n 规巩
 			A_Course(n.left); // n狼 哭率栏肺 柳青
 			A_Course(n.right); // n狼 坷弗率栏肺 柳青
 		}
@@ -41,7 +41,7 @@ public class Travel {
 	public void B_Course(Node n) { // B内胶
 		if (n != null) {
 			B_Course(n.left); // n狼 哭率栏肺 柳青
-			System.out.print(n.name + "-> "); // 级 n 规巩
+			System.out.print(n.name + " "); // 级 n 规巩
 			B_Course(n.right); // n狼 坷弗率栏肺 柳青
 		}
 	}
@@ -49,7 +49,7 @@ public class Travel {
 		if (n != null) {
 			C_Course(n.left); // n狼 哭率栏肺 柳青
 			C_Course(n.right); // n狼 坷弗率栏肺 柳青
-			System.out.print(n.name + "-> "); // 级 n 规巩
+			System.out.print(n.name + " "); // 级 n 规巩
 		}
 	}
 	public static void main(String[] args) {
